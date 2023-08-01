@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import HouseRow from './houseRow';
 
 const housesData = [
@@ -16,6 +17,8 @@ const housesData = [
 ];
 
 const HouseList = () => {
+    // must call Hooks at the top level, whithin the component's function
+    const [houses, setHouses] = useState(housesData);
     return (
         <>
             <div className='row mb-2'>
