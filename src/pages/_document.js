@@ -9,10 +9,11 @@ export default function Document() {
                 <link rel='stylesheet' href='../app/globals.css' />
             </Head>
             <body>
-                <Main />
+                <div className='container'>
+                    <Main />
+                </div>
                 <NextScript />
             </body>
         </Html>
     )
-
 };
