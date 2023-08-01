@@ -1,9 +1,6 @@
 import { logo, subtitle } from "./banner.module.css";
 
-const Banner = (props) => {
-
-    const { headerText } = props
-
+const Banner = ({ headerText }) => {
     return (
         <header className="row mb-4">
             <div className="col-5">
