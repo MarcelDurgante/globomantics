@@ -1,10 +1,10 @@
 // distructuring prop house in a deper level
-const HouseRow = ({ house: { address, country, price } }) => {
+const HouseRow = ({ house }) => {
     return (
         <tr>
-            <td>{address}</td>
-            <td>{country}</td>
-            <td>{price}</td>
+            <td>{house.address}</td>
+            <td>{house.country}</td>
+            <td>{house.price}</td>
         </tr>
     )
 }
