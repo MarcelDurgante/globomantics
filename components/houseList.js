@@ -1,4 +1,6 @@
-const house = [
+import HouseRow from './houseRow';
+
+const housesData = [
     {
         id: 1,
         address: "12 Valley of Kings, Geneva",
@@ -27,16 +29,12 @@ const HouseList = () => {
                         <th>Asking Price</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {housesData.map(house => (
+                        <HouseRow key={house.id} house={house} />
+                    ))}
+                </tbody>
             </table>
-            <tbody>
-                {house.map(h => (
-                    <tr key={h.id}>
-                        <td>{h.address}</td>
-                        <td>{h.country}</td>
-                        <td>{h.price}</td>
-                    </tr>
-                ))}
-            </tbody>
         </>
     )
 };
