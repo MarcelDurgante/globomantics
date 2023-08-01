@@ -1,4 +1,4 @@
-import { logo } from "./banner.module.css";
+import { logo, subtitle } from "./banner.module.css";
 
 const Banner = (props) => {
 
@@ -9,7 +9,7 @@ const Banner = (props) => {
             <div className="col-5">
                 <img src="./GloboLogo.png" alt="logo" className={logo} />
             </div>
-            <div className="col-7 mt-5 subtitleStyle">
+            <div className={`${subtitle} col-7 mt-5`}>
                 {headerText}
             </div>
         </header>

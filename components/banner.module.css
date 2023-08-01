@@ -3,8 +3,8 @@
   cursor: pointer;
 }
 
-.subtitleStyle {
-    font-style: "italic";
-    font-size: "x-large";
-    color: "coral";
+.subtitle {
+    font-style: italic;
+    font-size: x-large;
+    color: coral;
 }
