@@ -9,7 +9,7 @@ const App = () => {
         <>
             <Banner headerText='Providing houses all over the world' />
             {selectedHouse ?
-                <House house={selectedHouse} /> : <HouseList />
+                (<House house={selectedHouse} />) : (<HouseList selectedHouse={setSelectedHouse} />)
             }
         </>
     );
