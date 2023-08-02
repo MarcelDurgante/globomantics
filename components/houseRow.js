@@ -6,6 +6,7 @@ const HouseRow = ({ house }) => {
         <tr>
             <td>{house.address}</td>
             <td>{house.country}</td>
+            {/* if house.price is not zero or undefined (truthy) the td will render conditionally */}
             {house.price && <td className={`${house.price >= 500000 ? 'text-primary' : ''}`}>{currencyFormatter.format(house.price)}</td>}
         </tr>
     )
