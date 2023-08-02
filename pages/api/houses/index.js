@@ -9,7 +9,6 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export default async function handler(req, res) {
     const method = req?.method;
     const jsonFile = path.resolve("./", "houses.json");
-    console.log(jsonFile);
     const readFileData = await readFile(jsonFile);
     const houses = JSON.parse(readFileData).houses;
     await delay(1000);
