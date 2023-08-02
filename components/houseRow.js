@@ -1,3 +1,4 @@
+import React from 'react';
 import currencyFormatter from '@/helpers/currencyFormatter';
 // distructuring prop house in a deper level
 const HouseRow = ({ house }) => {
@@ -10,4 +11,6 @@ const HouseRow = ({ house }) => {
     )
 }
 
+const HouseRowMemoized = React.memo(HouseRow);
 export default HouseRow;
+export { HouseRowMemoized };
