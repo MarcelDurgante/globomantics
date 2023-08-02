@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { HouseRowMemoized } from './houseRow';
 
-const HouseList = ({ selectedHouse }) => {
+const HouseList = ({ selectHouse }) => {
     // must call Hooks at the top level, whithin the component's function
     const [houses, setHouses] = useState([]);
     // make the function passed into use effect async but this would make the function return and useEffect can't work with that. So we wrap the call to fetch in an extra function that is async and call that.To get to the response data a json function can be called on the response object. This is also an asynchronous operation we can awit. 
@@ -42,7 +42,7 @@ const HouseList = ({ selectedHouse }) => {
                 <tbody>
                     {houses
                         .map(house => (
-                            <HouseRowMemoized key={house.id} house={house} />
+                            <HouseRowMemoized key={house.id} house={house} selectHouse={selectHouse} />
                         ))}
                 </tbody>
             </table>
