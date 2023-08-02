@@ -9,6 +9,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export default async function handler(req, res) {
     const method = req?.method;
     const jsonFile = path.resolve("./", "houses.json");
+    console.log(jsonFile);
     const readFileData = await readFile(jsonFile);
     const houses = JSON.parse(readFileData).houses;
     await delay(1000);
@@ -31,7 +32,7 @@ export default async function handler(req, res) {
         case "POST":
             try {
                 const recordFromBody = req?.body;
-                recordFromBody.id = Math.max(...houses.map((h) => h.id)) + 1;
+                recordFromBody.id = Math.max(...houses.map((house) => house.id)) + 1;
                 const newHousesArray = [...houses, recordFromBody];
                 writeFile(
                     jsonFile,

@@ -25,10 +25,12 @@ const HouseList = () => {
         const fetchHouses = async () => {
             const response = await fetch("/api/houses");
             const houses = await response.json();
+            console.log(houses);
             setHouses(houses);
         };
         fetchHouses();
     }, []);
+
     const addHouse = () => {
         setHouses([
             ...houses,
